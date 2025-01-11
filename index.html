@@ -4,15 +4,21 @@
     <title>Fetch users</title>
   </head>
   <body>
-    <div>Trial 6</div>
+    <div>Trial 7</div>
     <script>
       const users = "https://jsonplaceholder.typicode.com/users"
       var userData = [];
-      userData = fetch(users)
-        .then(response => response.json())
-          .then(data => (data[0], data[1]))
-        .catch(error => console.error('Error fetching data:', error));
-      console.log(userData);
+      const userRet = async () => {
+        const response = await fetch(users);
+        const jsonUserData = await response.json();
+        return jsonUserData;
+      }
+      const userPush = async () => {
+        const data = await userRet();
+        userData = data;
+        console.log(userData);
+      }
+      userPush();
     </script>
   </body>
 </html>
