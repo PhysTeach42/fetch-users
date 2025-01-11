@@ -4,10 +4,10 @@
     <title>Fetch users</title>
   </head>
   <body>
-    <div>Trial 5</div>
+    <div>Trial 6</div>
     <script>
       const users = "https://jsonplaceholder.typicode.com/users"
-      const userData = [];
+      var userData = [];
       userData = fetch(users)
         .then(response => response.json())
           .then(data => (data[0], data[1]))
