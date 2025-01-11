@@ -4,13 +4,15 @@
     <title>Fetch users</title>
   </head>
   <body>
-    <div>Trial 3</div>
+    <div>Trial 4</div>
     <script>
       const users = "https://jsonplaceholder.typicode.com/users"
-      fetch(users)
+      const userData;
+      userData = fetch(users)
         .then(response => response.json())
-          .then(data => console.log(data[0], data[1]))
+          .then(data => (data[0], data[1]))
         .catch(error => console.error('Error fetching data:', error));
+      console.log(userData);
     </script>
   </body>
 </html>
