@@ -4,7 +4,7 @@
     <title>Fetch users</title>
   </head>
   <body>
-    <div>Trial 13</div>
+    <div>Trial 14</div>
     <div id="data"></div>
     <script>
       const users = "https://jsonplaceholder.typicode.com/users"
@@ -16,7 +16,7 @@
       }
       const userPush = async () => {
         const data = await userRet();
-        userData = [JSON.stringify(data[0]), JSON.stringify(data[1])];
+        userData = [JSON.stringify(data[0].name), JSON.stringify(data[1].name)];
         console.log(userData);
         return userData;
       }
